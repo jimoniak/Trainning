@@ -45,17 +45,25 @@ class GUI_menu : public Displayable
 	lgui::Bouton m_client;
 	lgui::Bouton m_quitter;
 
-	//page 1:
+	//page 1  :
     /*!< Element de la Page de création de serveur*/
         //Texte
         sf::Text m_textServerName;
 		sf::Text m_textport;
+		sf::Text m_textplayer;
 		//Boutons
         lgui::Bouton m_back;
+        lgui::Bouton m_create;
 
         //Zone de saisie
         lgui::ZoneSaisie m_serverName;
         lgui::ZoneSaisie m_port;
+
+    //Page 2:
+
+        //Texte
+        //Boutons
+        //
 
 
 	public:
