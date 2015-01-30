@@ -1,5 +1,5 @@
 /**
- * \file main.c^p
+ * \file main.cpp
  * \brief Fichier contenant le point d'entré du programme
  * \author J. PEAULT & Q. PUBERT
  * \version 0.1
@@ -23,16 +23,12 @@
  int main(void)
  {
 	 LFENETRE = 800;
-	 HFENETRE =600;
+	 HFENETRE = 600;
 
      sf::RenderWindow mainWindow(sf::VideoMode(LFENETRE,HFENETRE),"MainWindow");
 
-
 	 RessourceLoader ressourceLoader;
 	 GUI_menu menuPrincipal(&ressourceLoader,&mainWindow);
-
-
-
 	 sf::Event event;
 
 	 while (mainWindow.isOpen()) {

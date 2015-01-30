@@ -1,3 +1,13 @@
+/**
+ * \file constantes.hpp
+ * \brief Fichier contenant les varaibles globales et ou constantes du programme
+ * \author J. PEAULT & Q. PUBERT
+ * \version 0.1
+ * \date 29 janvier 2015
+ *
+ * .
+ */
+
 
 #ifndef CONST
 #define CONST

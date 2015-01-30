@@ -31,21 +31,22 @@ class GUI_menu : public Displayable
 {
 
 	private:
-	bool m_open;
-	int m_pageMenu;
+	bool m_open;/*!< savoir si le menu est ouvert*/
+	int m_pageMenu;/*!< permet de choisir la page du GUI à afficher*/
 
 	sf::Font m_font;
 
 	//attributs liés à l'affichage principal:
 
 	//page 0:
+	/*!< Elements de la page principale*/
 	sf::RectangleShape m_fond;
 	lgui::Bouton m_server;
 	lgui::Bouton m_client;
 	lgui::Bouton m_quitter;
 
 	//page 1:
-
+    /*!< Element de la Page de création de serveur*/
         //Texte
         sf::Text m_textServerName;
 		sf::Text m_textport;
@@ -59,7 +60,7 @@ class GUI_menu : public Displayable
 
 	public:
 
-	GUI_menu(RessourceLoader *rsholder,sf::RenderWindow *window);
+	 GUI_menu(RessourceLoader *rsholder,sf::RenderWindow *window);
    ~GUI_menu();
 
 

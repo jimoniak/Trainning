@@ -12,8 +12,8 @@
 
 
 GUI_menu::GUI_menu(RessourceLoader *rsholder,sf::RenderWindow *window) :
-    m_serverName( m_font, sf::Vector2f(250,30), sf::Vector2f( LFENETRE/2-125, HFENETRE/2 - 50), sf::Color::Green ,sf::Color::Blue),
-    m_port( m_font, sf::Vector2f(250,30), sf::Vector2f( LFENETRE/2-125, HFENETRE/2 + 50), sf::Color::Green ,sf::Color::Blue)
+    m_serverName( m_font, sf::Vector2f(250,30), sf::Vector2f( LFENETRE/2-125, HFENETRE/2 - 50), sf::Color::Red ,sf::Color::Green),
+    m_port( m_font, sf::Vector2f(125,30), sf::Vector2f( LFENETRE/2-125, HFENETRE/2 + 50), sf::Color::Red ,sf::Color::Green)
 {
 	//Création de la fenetre:
 	m_window = window; // new sf::RenderWindow(sf::VideoMode(LFENETRE, HFENETRE), L"Trainning Réseau!");
@@ -81,8 +81,6 @@ GUI_menu::GUI_menu(RessourceLoader *rsholder,sf::RenderWindow *window) :
 
 GUI_menu::~GUI_menu()
 {
-
-
 }
 
 void GUI_menu::gererSaisie(sf::Event *evt)
