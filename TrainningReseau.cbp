@@ -12,6 +12,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
 				</Compiler>
 			</Target>
@@ -29,10 +30,43 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-std=c++11" />
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="SFML-2.2/include" />
+			<Add directory="LimbGUI/include" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Linker>
+			<Add library="sfml-graphics" />
+			<Add library="sfml-window" />
+			<Add library="sfml-network" />
+			<Add library="sfml-system" />
+			<Add library="LimbGUI\lib\libLimbGUI.a" />
+			<Add directory="SFML-2.2/lib" />
+			<Add directory="C:/Users/Jimmy/Documents/Projet/LimbGUI/bin/Debug" />
+		</Linker>
+		<Unit filename="Sources/affichable.cpp" />
+		<Unit filename="Sources/affichable.hpp" />
+		<Unit filename="Sources/carte.cpp" />
+		<Unit filename="Sources/carte.hpp" />
+		<Unit filename="Sources/client.cpp" />
+		<Unit filename="Sources/client.hpp" />
+		<Unit filename="Sources/console.cpp" />
+		<Unit filename="Sources/console.hpp" />
+		<Unit filename="Sources/constantes.hpp" />
+		<Unit filename="Sources/gui_menu.cpp" />
+		<Unit filename="Sources/gui_menu.hpp" />
+		<Unit filename="Sources/joueur.cpp" />
+		<Unit filename="Sources/joueur.hpp" />
+		<Unit filename="Sources/main.cpp" />
+		<Unit filename="Sources/messagerie.cpp" />
+		<Unit filename="Sources/messagerie.hpp" />
+		<Unit filename="Sources/ressourceLoader.cpp" />
+		<Unit filename="Sources/ressourceLoader.hpp" />
+		<Unit filename="Sources/serveur.cpp" />
+		<Unit filename="Sources/serveur.hpp" />
+		<Unit filename="Sources/utils.cpp" />
+		<Unit filename="Sources/utils.hpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
