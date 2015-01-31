@@ -8,17 +8,14 @@
  * Ce programme permet de tester les fonctionnalités réseaux de la sfml 2.2 . Cela permet également d'entrainer l'équipe pour un projet plus conséquent.
  *
  */
-  #define GLOBAL
-  #include <SFML/Graphics.hpp>
-  #include <LimbGUI/GUI.hpp>
-  #include "constantes.hpp"
+#define GLOBAL
+#include <SFML/Graphics.hpp>
+#include <LimbGUI/GUI.hpp>
+#include "constantes.hpp"
 
-  #include "affichable.hpp"
-  #include "gui_menu.hpp"
-  #include "ressourceLoader.hpp"
-
-
-
+#include "affichable.hpp"
+#include "gui_menu.hpp"
+#include "ressourceLoader.hpp"
 
  int main(void)
  {
