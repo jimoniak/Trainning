@@ -40,15 +40,12 @@ Map::~Map(){}
 
         }
 
+
+    }
+
         m_texture.loadFromImage(m_imageCarte);
         m_texture.setSmooth(true);
         m_apparence.setTexture(m_texture);
-
-
-
-
-
-    }
 
  }
 
