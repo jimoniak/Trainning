@@ -5,9 +5,9 @@
 
 #include "affichable.hpp"
 #include "gui_menu.hpp"
-
-
 #include <iostream>
+
+//Commentaire test pour Github
 
 GUI_menu::GUI_menu(RessourceLoader *rsholder,
                    sf::RenderWindow *window)
@@ -153,8 +153,8 @@ bool GUI_menu::display()
 {
 
 
-	if(m_open)
-	{
+//	if(m_open)
+	//{
 		switch(m_pageMenu)
 		{
 			case 0:
@@ -182,7 +182,7 @@ bool GUI_menu::display()
 
 		}
 
-	}
+	//}
 
 
 	return true;
