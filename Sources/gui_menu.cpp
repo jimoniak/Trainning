@@ -23,6 +23,12 @@ GUI_menu::GUI_menu(RessourceLoader *rsholder,
               static_cast<float>(HFENETRE) / 2.0f + 50.0f},
               sf::Color::Red,
               sf::Color::Green)
+    ,m_ipServer(m_font,
+                   {250.0f, 30.0f},
+                   {static_cast<float>(LFENETRE) / 2.0f - 125.0f,
+                    static_cast<float>(HFENETRE) / 2.0f - 50.0f},
+                    sf::Color::Red,
+                    sf::Color::Green)
 {
 	//Création de la fenetre:
     m_window = window; // new sf::RenderWindow(sf::VideoMode(LFENETRE, HFENETRE), L"Trainning Réseau!");
@@ -105,8 +111,28 @@ GUI_menu::GUI_menu(RessourceLoader *rsholder,
             m_port.setFenetrelie(*m_window);
             std::string charset = "0123456789";
             m_port.setCharset(charset);
-    //Page 2:
 
+    //Page 2:
+            //Textes
+
+            m_textIpServer.setFont(m_font);
+            m_textIpServer.setCharacterSize(15);
+            m_textIpServer.setColor(sf::Color::Green);
+            m_textIpServer.setString(L"Veuillez entrer le L'ip ou l'adresse du serveur:");
+            m_textIpServer.setPosition(LFENETRE/2 - m_textServerName.getGlobalBounds().width / 2 , HFENETRE / 2 - 100);
+
+            //Bouton:
+            m_join =   lgui::Bouton(m_font,rsholder->getTexGUI(0),rsholder->getTexGUI(1));
+            m_join.setPosition(sf::Vector2f(LFENETRE/2   - (rsholder->getTexGUI(0)->getSize().x / 2  )  ,HFENETRE  - 100 ));
+            m_join.setFenetrelie(*m_window);
+            m_join.setTitre("Rejoindre ");
+            m_join.setTailleTexte(15);
+
+            //Zone de saisie:
+
+
+            m_ipServer.setFont(m_font);
+            m_ipServer.setFenetrelie(*m_window);
 
 
 }
@@ -121,6 +147,12 @@ void GUI_menu::gererSaisie(sf::Event *evt)
            if(m_pageMenu==1)
             {
                 m_serverName.actif(*evt);
+                m_port.actif(*evt);
+            }
+            if(m_pageMenu == 2)
+            {
+
+                m_ipServer.actif(*evt);
                 m_port.actif(*evt);
             }
 
@@ -142,6 +174,7 @@ void GUI_menu::ouvrir()
 	break;
 	case 2:
          if(m_back.actionner())  m_pageMenu = 0;
+         if(m_join.actionner()) {}
 	default:
 	break;
 	}
@@ -175,6 +208,12 @@ bool GUI_menu::display()
 			break;
 			case 2:
             m_window->draw(m_fond);
+            m_window->draw(m_textIpServer);
+            m_window->draw(m_textport);
+			m_port.afficher();
+            m_ipServer.afficher();
+
+            m_join.afficher();
 			m_back.afficher();
 			default:
 			break;

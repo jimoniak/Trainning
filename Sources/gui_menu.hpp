@@ -59,11 +59,18 @@ class GUI_menu : public Displayable
         lgui::ZoneSaisie m_serverName;
         lgui::ZoneSaisie m_port;
 
-    //Page 2:
+    //Page 2: // Page rejoindre serveur
 
         //Texte
+         sf::Text m_textIpServer;
+		 //sf::Text m_textport; on utilise le même Text que pour le serveur
         //Boutons
-        //
+        lgui::Bouton m_join;
+        //lgui::Bouton m_back; on utilise le même bouton retour pour la page client
+
+        //Zone Saisie
+        lgui::ZoneSaisie m_ipServer;
+       // lgui::ZoneSaisie m_port; on réutilise la même zone de saisie que celle du serveur.
 
 
 	public:
