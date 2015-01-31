@@ -90,14 +90,14 @@ GUI_menu::GUI_menu(RessourceLoader *rsholder,
          m_textplayer.setPosition(LFENETRE/2 - m_textServerName.getGlobalBounds().width / 2 , HFENETRE / 2 + 100 );
 
 		//Boutons
-		m_back = lgui::Bouton(m_font,rsholder->getTexGUI(0),rsholder->getTexGUI(1));
+		m_back = buttonFact();
 		m_back.setPosition(sf::Vector2f(LFENETRE  - (rsholder->getTexGUI(0)->getSize().x + 30 )  ,HFENETRE  - 100 ));
 		m_back.setFenetrelie(*m_window);
 		m_back.setTitre("Retour");
 		m_back.setTailleTexte(15);
 
 
-        m_create = lgui::Bouton(m_font,rsholder->getTexGUI(0),rsholder->getTexGUI(1));
+        m_create = buttonFact();
 		m_create.setPosition(sf::Vector2f(LFENETRE/2   - (rsholder->getTexGUI(0)->getSize().x / 2  )  ,HFENETRE  - 100 ));
 		m_create.setFenetrelie(*m_window);
 		m_create.setTitre("Creer ");
@@ -122,7 +122,7 @@ GUI_menu::GUI_menu(RessourceLoader *rsholder,
             m_textIpServer.setPosition(LFENETRE/2 - m_textServerName.getGlobalBounds().width / 2 , HFENETRE / 2 - 100);
 
             //Bouton:
-            m_join =   lgui::Bouton(m_font,rsholder->getTexGUI(0),rsholder->getTexGUI(1));
+            m_join =  buttonFact();
             m_join.setPosition(sf::Vector2f(LFENETRE/2   - (rsholder->getTexGUI(0)->getSize().x / 2  )  ,HFENETRE  - 100 ));
             m_join.setFenetrelie(*m_window);
             m_join.setTitre("Rejoindre ");
@@ -184,7 +184,6 @@ void GUI_menu::ouvrir()
 
 bool GUI_menu::display()
 {
-
 
 //	if(m_open)
 	//{
