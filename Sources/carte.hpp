@@ -22,20 +22,23 @@ class Map : public Displayable
 {
 
 	private:
-	sf::Vector2f m_dimension;//en nombres de tiles
+	sf::Vector2f m_size;//en nombres de tiles
 	sf::Texture  m_texture;
 	sf::Sprite    m_apparence;
 
 
 	public:
 	    Map();
-	    Map(sf::Vector2f dimension,sf::RenderWindow *window);
+	    Map(sf::Vector2f size,sf::RenderWindow *window);
       ~Map();
 
 
 	    void createMap(RessourceLoader &rsholder);
 
 	    bool display();
+
+	    //GETTER:
+	    sf::Vector2f getSize();
 
 
 
