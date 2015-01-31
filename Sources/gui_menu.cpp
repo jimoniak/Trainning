@@ -9,42 +9,57 @@
 
 #include <iostream>
 
-
-
-GUI_menu::GUI_menu(RessourceLoader *rsholder,sf::RenderWindow *window) :
-    m_serverName( m_font, sf::Vector2f(250,30), sf::Vector2f( LFENETRE/2-125, HFENETRE/2 - 50), sf::Color::Red ,sf::Color::Green),
-    m_port( m_font, sf::Vector2f(125,30), sf::Vector2f( LFENETRE/2-125, HFENETRE/2 + 50), sf::Color::Red ,sf::Color::Green)
+GUI_menu::GUI_menu(RessourceLoader *rsholder,
+                   sf::RenderWindow *window)
+    : m_serverName(m_font,
+                   {250.0f, 30.0f},
+                   {static_cast<float>(LFENETRE) / 2.0f - 125.0f,
+                    static_cast<float>(HFENETRE) / 2.0f - 50.0f},
+                    sf::Color::Red,
+                    sf::Color::Green)
+    , m_port(m_font,
+             {125.0f, 30.0f},
+             {static_cast<float>(LFENETRE) / 2.0f - 125.0f,
+              static_cast<float>(HFENETRE) / 2.0f + 50.0f},
+              sf::Color::Red,
+              sf::Color::Green)
 {
 	//Création de la fenetre:
-	m_window = window; // new sf::RenderWindow(sf::VideoMode(LFENETRE, HFENETRE), L"Trainning Réseau!");
-	if(!m_font.loadFromFile("Ressources/GUI/Font/Timeless.ttf")) std::cerr<<" Erreur de chargement de la police!"<<std::endl;
+    m_window = window; // new sf::RenderWindow(sf::VideoMode(LFENETRE, HFENETRE), L"Trainning Réseau!");
+    m_font.loadFromFile("Ressources/GUI/Font/Timeless.ttf");
 
-	m_pageMenu = 0;
+    m_pageMenu = 0;
+    m_open = true;
 
 	//Page 0:
-	 m_fond.setFillColor(sf::Color::Blue);
-	 m_fond.setSize(sf::Vector2f(LFENETRE,HFENETRE));
+    m_fond.setFillColor(sf::Color::Blue);
+    m_fond.setSize(sf::Vector2f{sf::Vector2i{LFENETRE, HFENETRE}});
 
-		//Boutons
-		m_server =  lgui::Bouton(m_font,rsholder->getTexGUI(0),rsholder->getTexGUI(1));
-		m_client =  lgui::Bouton(m_font,rsholder->getTexGUI(0),rsholder->getTexGUI(1));
-		m_quitter = lgui::Bouton(m_font,rsholder->getTexGUI(0),rsholder->getTexGUI(1));
+    //Boutons
+    const auto buttonFact = [&] { return lgui::Bouton(m_font,rsholder->getTexGUI(0),rsholder->getTexGUI(1)); };
+    m_server = buttonFact();
+    m_client = buttonFact();
+    m_quitter = buttonFact();
 
-		m_server.setPosition(sf::Vector2f(LFENETRE / 2 - rsholder->getTexGUI(0)->getSize().x / 2 ,HFENETRE / 2 - 100));
-		m_client.setPosition(sf::Vector2f(LFENETRE / 2 - rsholder->getTexGUI(0)->getSize().x / 2 ,HFENETRE / 2 ));
-		m_quitter.setPosition(sf::Vector2f(LFENETRE / 2 - rsholder->getTexGUI(0)->getSize().x / 2 ,HFENETRE / 2 + 100));
+    sf::Vector2f firstButtonPos(static_cast<float>(LFENETRE - rsholder->getTexGUI(0)->getSize().x) / 2.0f,
+                                static_cast<float>(HFENETRE / 2.0f - 100.0f));
+    m_server.setPosition(firstButtonPos);
+    firstButtonPos.y += 100.0f;
+    m_client.setPosition(firstButtonPos);
+    firstButtonPos.y += 100.0f;
+    m_quitter.setPosition(firstButtonPos);
 
-		m_server.setFenetrelie(*m_window);
-		m_client.setFenetrelie(*m_window);
-		m_quitter.setFenetrelie(*m_window);
+    m_server.setFenetrelie(*m_window);
+    m_client.setFenetrelie(*m_window);
+    m_quitter.setFenetrelie(*m_window);
 
-		m_server.setTitre("Serveur");
-		m_client.setTitre("Client");
-		m_quitter.setTitre("Quitter");
+    m_server.setTitre("Serveur");
+    m_client.setTitre("Client");
+    m_quitter.setTitre("Quitter");
 
-		m_server.setTailleTexte(15);
-		m_client.setTailleTexte(15);
-		m_quitter.setTailleTexte(15);
+    m_server.setTailleTexte(15);
+    m_client.setTailleTexte(15);
+    m_quitter.setTailleTexte(15);
 
 	//Page 1:
 

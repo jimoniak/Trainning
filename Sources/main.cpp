@@ -27,6 +27,8 @@
 
      sf::RenderWindow mainWindow(sf::VideoMode(LFENETRE,HFENETRE),"MainWindow");
 
+     mainWindow.setVerticalSyncEnabled(true);
+
 	 RessourceLoader ressourceLoader;
 	 GUI_menu menuPrincipal(&ressourceLoader,&mainWindow);
 	 sf::Event event;
