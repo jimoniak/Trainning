@@ -10,17 +10,17 @@ namespace gui
      
      }
 	 
-	 Button(const sf::Texture &texture,sf::Vector2f position ) :m_text(addChild(std::make_unique<gui::Text>()))
-	 {
+	 Button(const sf::Texture &texture,sf::Vector2f position ) :m_text(addChild(std::make_unique<gui::Text>())){
+		
 		 setPosition(posiiton);
 		 setTexture(texture);
 			 
 	 }
     
-    void Button::setTexture(const sf::Texture &texture)
-    {
+    void Button::setTexture(const sf::Texture &texture){
+		
         m_sprite.setTexture(texture);
-        m_bounds = texture.getGlobalBound();    
+        m_bounds = m_sprite.getGlobalBounds();    
     
     }
     

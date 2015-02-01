@@ -40,6 +40,7 @@ class TextInput : public Widget
 		~TextInput();
 	
     private:
+	
 		sf::RectangleShape m_background;
 		sf::RectangleShape m_highLight;
 		std::string m_charset;
