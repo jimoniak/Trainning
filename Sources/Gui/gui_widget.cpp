@@ -134,6 +134,7 @@ Widget* Widget::s_selected = nullptr;
 
     Widget::~Widget(){}
 	
+	//PROTECTED:
 	WidgetPtr Widget::abandonChild(Widget* childPtr) {
         childPtr->m_parent = nullptr;
         auto childIt = std::find_if(m_children.begin(), m_children.end(),

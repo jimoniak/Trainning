@@ -45,6 +45,18 @@
 			<Add directory="SFML-2.2/lib" />
 			<Add directory="C:/Users/Jimmy/Documents/Projet/LimbGUI/bin/Debug" />
 		</Linker>
+		<Unit filename="Sources/Gui/gui_button.cpp" />
+		<Unit filename="Sources/Gui/gui_button.hpp" />
+		<Unit filename="Sources/Gui/gui_loadingBar.cpp" />
+		<Unit filename="Sources/Gui/gui_loadingBar.hpp" />
+		<Unit filename="Sources/Gui/gui_text.cpp" />
+		<Unit filename="Sources/Gui/gui_text.hpp" />
+		<Unit filename="Sources/Gui/gui_textInput.cpp" />
+		<Unit filename="Sources/Gui/gui_textInput.hpp" />
+		<Unit filename="Sources/Gui/gui_widget.cpp" />
+		<Unit filename="Sources/Gui/gui_widget.hpp" />
+		<Unit filename="Sources/Gui/gui_window.cpp" />
+		<Unit filename="Sources/Gui/gui_window.hpp" />
 		<Unit filename="Sources/affichable.cpp" />
 		<Unit filename="Sources/affichable.hpp" />
 		<Unit filename="Sources/carte.cpp" />
