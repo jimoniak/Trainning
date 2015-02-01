@@ -1,4 +1,13 @@
-
+/**
+ * \file gui_textInput.hpp
+ * \brief Fichier contenant la class TextInput
+ * \author J. PEAULT & Q. PUBERT
+ * \version 0.1
+ * \date 01 fevrier 2015
+ *
+ *  La classe Text permet à l'utilisateur de renseigner du text. chaque objet de cette classe pourront posséder un charset choisi
+ *	qui permet d'interdire certain caractère.
+ */
 #ifndef TEXT_INPUT
 #define TEXT_INPUT
 

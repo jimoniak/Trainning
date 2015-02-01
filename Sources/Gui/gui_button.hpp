@@ -1,4 +1,12 @@
-
+/**
+ * \file gui_button.hpp
+ * \brief Fichier contenant la classe button
+ * \author J. PEAULT & Q. PUBERT
+ * \version 0.1
+ * \date 01 fevrier 2015
+ *
+ *  La classe button permet de créer des boutons qui permettent d'intéragir avec le programme. Ils sont crées à partir d'une texture qui determinera leur bound.
+ */
 #ifndef BUTTON
 #define BUTTON
 

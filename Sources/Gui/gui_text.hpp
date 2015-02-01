@@ -1,3 +1,14 @@
+/**
+ * \file gui_text.hpp
+ * \brief Fichier contenant la class Text
+ * \author J. PEAULT & Q. PUBERT
+ * \version 0.1
+ * \date 01 fevrier 2015
+ *
+ *  La classe Text est un dérivé de la class sf::Text. En effet, afin de pouvoir l'intégrer correctement au gui, cette class englobe le sf::Text dans un Widget.
+ *  L'objet peut ainsi être manipulé comme un widget a part entière.
+ */
+
 #ifndef TEXT
 #define TEXT
 

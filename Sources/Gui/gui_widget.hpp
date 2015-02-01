@@ -1,3 +1,14 @@
+/**
+ * \file gui_widget.hpp
+ * \brief Fichier contenant la class Widget
+ * \author J. PEAULT & Q. PUBERT
+ * \version 0.1
+ * \date 01 fevrier 2015
+ *
+ *  La classe Widget est le point de départ du gui. tout element de gui hérite de cette classe.
+ */
+
+
 #ifndef WIDGET
 #define WIDGET
 

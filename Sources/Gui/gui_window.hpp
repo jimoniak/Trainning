@@ -23,7 +23,7 @@ class Window : public Widget
 	
 	private:
 	
-	sf::RectangleShape m_background;/*<! fond de la fenetre>
+	sf::RectangleShape m_background;/*<! fond de la fenetre>*/
 	
 	
 	
