@@ -6,7 +6,7 @@ namespace gui
 {
 	 LoadingBar::LoadingBar(){}
      LoadingBar::LoadingBar(sf::Vector2f size,
-				std::string descr,
+				sf::String descr,
 				float MAX,float param ,
 				sf::Color clrBack,
 				sf::Color clrFore,

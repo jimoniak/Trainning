@@ -42,7 +42,7 @@ namespace gui
     
     Button::~Button(){}
     
-    void Button::setText(sf::Font &font,std::string str ,int characterSize ,sf::Color color){
+    void Button::setText(sf::Font &font,sf::String str ,int characterSize ,sf::Color color){
     
     m_text->setFont(font);
     m_text->setString(str);

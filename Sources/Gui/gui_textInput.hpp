@@ -23,12 +23,12 @@ class TextInput : public Widget
     public:
 		std::string getTextEntered();
 		TextInput();
-		TextInput(sf::Vector2u size,std::string charset = "1234567890",sf::Color color=sf::Color::Green);
+		TextInput(sf::Vector2u size,sf::String charset = "1234567890",sf::Color color=sf::Color::Green);
      
-		void setDescription(sf::Font &font,std::string str = "Titre",int characterSize = 10,sf::Color color = sf::Color::Black);
-		void setTextEntered(sf::Font &font,std::string str = "Renseignez ici",int characterSize = 10,sf::Color color = sf::Color::Black);
+		void setDescription(sf::Font &font,sf::String str = "Titre",int characterSize = 10,sf::Color color = sf::Color::Black);
+		void setTextEntered(sf::Font &font,sf::String str = "Renseignez ici",int characterSize = 10,sf::Color color = sf::Color::Black);
     
-		void onMove(const sf::Vector2f& delta);
+		
     
 		void majTextEntered();
     
@@ -43,9 +43,9 @@ class TextInput : public Widget
 	
 		sf::RectangleShape m_background;
 		sf::RectangleShape m_highLight;
-		std::string m_charset;
-		gui::Text *m_description;   /*<! Phrase expliquant ce que la zone de saisie attend */
-		sf::Text m_textEntered; /*<! texte entré dans la zone de saisie*/
+		sf::String m_charset;
+		gui::Text  *m_description;   /*<! Phrase expliquant ce que la zone de saisie attend */
+		gui::Text  *m_textEntered; /*<! texte entré dans la zone de saisie*/
     
      
 

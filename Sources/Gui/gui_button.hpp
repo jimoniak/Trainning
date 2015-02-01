@@ -23,7 +23,7 @@ class Button : public Widget
      
     
     void setTexture(const sf::Texture &texture);
-	void setText(sf::Font &font,std::string str = "Titre",int characterSize = 10,sf::Color color = sf::Color::Black);   
+	void setText(sf::Font &font,sf::String str = "Titre",int characterSize = 10,sf::Color color = sf::Color::Black);   
     
     
     template <typename F>
