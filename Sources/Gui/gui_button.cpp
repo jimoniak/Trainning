@@ -5,10 +5,17 @@ namespace gui
 {
 	
 	
-     Button() : m_text(addChild(std::make_unique<gui::Text>()))
+     Button()
      {
      
      }
+	 
+	 Button(const sf::Texture &texture,sf::Vector2f position ) :m_text(addChild(std::make_unique<gui::Text>()))
+	 {
+		 setPosition(posiiton);
+		 setTexture(texture);
+			 
+	 }
     
     void Button::setTexture(const sf::Texture &texture)
     {
