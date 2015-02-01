@@ -59,8 +59,7 @@ protected:
 
 
 
-    virtual void onMyMove() ;
-    virtual void drawMyself(sf::RenderTarget& target, sf::RenderStates states) const;
+      virtual void drawMyself(sf::RenderTarget& target, sf::RenderStates states) const;
 
     std::vector<WidgetPtr> m_children;
     Widget* m_parent;

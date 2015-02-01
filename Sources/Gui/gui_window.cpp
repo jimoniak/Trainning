@@ -25,7 +25,6 @@ namespace gui
 	void Window::onMouseEnter(){}
     void Window::onMouseExit(){}
 	void Window::drawMyself(sf::RenderTarget& target, sf::RenderStates states) const {}
-	void Window::onMyMove(){}
 	
 	
 	

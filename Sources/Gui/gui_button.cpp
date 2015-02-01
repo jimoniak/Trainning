@@ -35,10 +35,10 @@ namespace gui
         }
     }
     
-    void Button::onMove(const sf::Vector2f& delta){
+   /* void Button::onMove(const sf::Vector2f& delta){
      m_sprite.setPosition(delta);
      m_highlight.setposition(delta);
-   }
+   }*/
     
     Button::~Button(){}
     

@@ -32,7 +32,7 @@ class Button : public Widget
     }
     
     void onMyClick();   
-    void onMove(const sf::Vector2f& delta);   
+    //void onMove(const sf::Vector2f& delta);   
     void drawMyself(sf::RenderTarget& target, sf::RenderStates states) const ;
 	
     ~Button();
