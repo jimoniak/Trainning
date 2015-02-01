@@ -7,9 +7,10 @@ namespace gui
 	LoadingBar(){}
      LoadingBar(sf::Vector2f size,
 				std::string descr,
-				float MAX,float MIN,
-				sf::Color clrBack ,
-				sf::Color clrFore ) :
+				float MAX,float param ,
+				sf::Color clrBack,
+				sf::Color clrFore,
+				float MIN) :
                     m_description(addChild(std::make_unique<gui::Text>())),
                     m_count(addChild(std::make_unique<gui::Text>()))
      {
@@ -18,6 +19,7 @@ namespace gui
          
          m_description.setString(descr);
          m_MAX = MAX;
+		 m_param = param;
          m_MIN=  MIN;
          
          m_background.setFillColor(clrBlack);

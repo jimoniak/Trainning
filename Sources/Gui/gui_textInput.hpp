@@ -8,6 +8,7 @@
  *  La classe Text permet à l'utilisateur de renseigner du text. chaque objet de cette classe pourront posséder un charset choisi
  *	qui permet d'interdire certain caractère.
  */
+ 
 #ifndef TEXT_INPUT
 #define TEXT_INPUT
 
