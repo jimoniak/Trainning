@@ -11,7 +11,7 @@ class Window : public Widget
 {
 	public:
 	 Window();
-	 Window(sf::Vector2f size,std::title = "window",sf::Color color = sf::Color blue);
+	 Window(sf::Vector2f size,sf::String title = "window",sf::Color color = sf::Color blue);
 	~Window();
 	
 	

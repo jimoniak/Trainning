@@ -10,17 +10,17 @@ namespace gui
      
      }
 	 
-	 Button(const sf::Texture &texture,sf::Vector2f position ) :m_text(addChild(std::make_unique<gui::Text>()))
-	 {
+	 Button(const sf::Texture &texture,sf::Vector2f position ) :m_text(addChild(std::make_unique<gui::Text>())){
+		
 		 setPosition(posiiton);
 		 setTexture(texture);
 			 
 	 }
     
-    void Button::setTexture(const sf::Texture &texture)
-    {
+    void Button::setTexture(const sf::Texture &texture){
+		
         m_sprite.setTexture(texture);
-        m_bounds = texture.getGlobalBound();    
+        m_bounds = m_sprite.getGlobalBounds();    
     
     }
     
@@ -35,14 +35,14 @@ namespace gui
         }
     }
     
-    void Button::onMove(const sf::Vector2f& delta){
+   /* void Button::onMove(const sf::Vector2f& delta){
      m_sprite.setPosition(delta);
      m_highlight.setposition(delta);
-   }
+   }*/
     
     Button::~Button(){}
     
-    void Button::setText(sf::Font &font,std::string str ,int characterSize ,sf::Color color){
+    void Button::setText(sf::Font &font,sf::String str ,int characterSize ,sf::Color color){
     
     m_text->setFont(font);
     m_text->setString(str);
