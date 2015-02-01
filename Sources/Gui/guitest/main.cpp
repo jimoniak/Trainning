@@ -313,10 +313,10 @@ class LoadingBar : public Widget
     public:
      LoadingBar(){}
      LoadingBar(sf::Vector2f size,
-				sf::String descr,
-				float MAX,float MIN=0,
-				sf::Color clrBack = sf::Color::Blue,
-				sf::Color clrFore = sf::Color::White)
+                sf::String descr,
+                float MAX,float MIN=0,
+                sf::Color clrBack = sf::Color::Blue,
+                sf::Color clrFore = sf::Color::White)
     : m_description(addChild(std::make_unique<gui::Text>()))
     , m_count(addChild(std::make_unique<gui::Text>()))
     {
@@ -331,21 +331,17 @@ class LoadingBar : public Widget
         m_foreground.setFillColor(clrFore);
     }
 
+    ~LoadingBar() = default;
 
-    ~LoadingBar(){}
-
-
-
-    private:
-
+private:
     sf::RectangleShape m_background;
     sf::RectangleShape m_foreground;
     float m_MIN;
     float m_MAX;
     gui::Text *m_description;
     gui::Text *m_count;
-
 };
+
 }
 
 int main() {
