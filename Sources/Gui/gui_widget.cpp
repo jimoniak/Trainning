@@ -4,7 +4,6 @@
 namespace gui
 {
 
-using WidgetPtr = std::unique_ptr<Widget>;
 Widget* Widget::s_selected = nullptr;
 
 
@@ -36,7 +35,7 @@ Widget* Widget::s_selected = nullptr;
             && (p.y <= m_bounds.top + m_bounds.height);
     }
 
-    
+
 
     void Widget::setParent(Widget* newParent) {
         newParent->addChild((m_parent) ? m_parent->abandonChild(this) : WidgetPtr{this});
@@ -133,7 +132,7 @@ Widget* Widget::s_selected = nullptr;
     }
 
     Widget::~Widget(){}
-	
+
 	//PROTECTED:
 	WidgetPtr Widget::abandonChild(Widget* childPtr) {
         childPtr->m_parent = nullptr;
@@ -156,7 +155,7 @@ Widget* Widget::s_selected = nullptr;
     void Widget::onMyClick(sf::Mouse::Button button) {}
     void Widget::drawMyself(sf::RenderTarget& target, sf::RenderStates states) const {}
 
-    
-    
+
+
 
 }

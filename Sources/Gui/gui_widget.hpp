@@ -12,7 +12,6 @@
 #ifndef WIDGET
 #define WIDGET
 
-
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
@@ -21,26 +20,19 @@
 #include <SFML/Window/Event.hpp>
 #include <vector>
 
-namespace std {
-
-template <typename T, typename... Args>
-unique_ptr<T> make_unique(Args&&... args) {
-    return std::unique_ptr<T>{new T{std::forward<Args>(args)...}};
-}
-
-}
-
-
+#include "../make_unique.hpp"
 
 namespace gui
 {
+
+using WidgetPtr = std::unique_ptr<Widget>;
 
 class Widget : public sf::Drawable
 {
 
     public:
     Widget(Widget* parent = nullptr);
-    
+
 
     sf::Vector2f getLocalPosition() const ;
     sf::FloatRect getLocalBounds() const ;

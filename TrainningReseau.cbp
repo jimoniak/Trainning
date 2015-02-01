@@ -71,6 +71,7 @@
 		<Unit filename="Sources/joueur.cpp" />
 		<Unit filename="Sources/joueur.hpp" />
 		<Unit filename="Sources/main.cpp" />
+		<Unit filename="Sources/make_unique.hpp" />
 		<Unit filename="Sources/messagerie.cpp" />
 		<Unit filename="Sources/messagerie.hpp" />
 		<Unit filename="Sources/ressourceLoader.cpp" />
