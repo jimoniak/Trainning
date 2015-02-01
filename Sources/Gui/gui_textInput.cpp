@@ -6,7 +6,13 @@ namespace gui
 	std::string TextInput::getTextEntered(){
     return m_textEntered;
     }
-     TextInput::TextInput();
+	
+	
+	
+     TextInput::TextInput(){
+	 }
+	 
+	 
      TextInput::TextInput(sf::Vector2u size,std::string charset,sf::Color color):
      m_description(addChild(std::make_unique<gui::Text>())){
      m_background.setSize(size);
