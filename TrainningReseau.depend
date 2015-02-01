@@ -430,3 +430,76 @@
 	"constantes.hpp"
 	<cstdlib>
 
+1422653964 source:c:\users\piticroissant\documents\github\trainning\sources\affichable.cpp
+	<SFML/Graphics.hpp>
+	"affichable.hpp"
+
+1422653964 c:\users\piticroissant\documents\github\trainning\sources\affichable.hpp
+
+1422736624 source:c:\users\piticroissant\documents\github\trainning\sources\carte.cpp
+	"ressourceLoader.hpp"
+	"carte.hpp"
+
+1422653964 c:\users\piticroissant\documents\github\trainning\sources\ressourceloader.hpp
+	<SFML/Graphics.hpp>
+	<vector>
+
+1422736624 c:\users\piticroissant\documents\github\trainning\sources\carte.hpp
+	<SFML/Graphics.hpp>
+	"affichable.hpp"
+
+1422653964 source:c:\users\piticroissant\documents\github\trainning\sources\client.cpp
+
+1422653964 source:c:\users\piticroissant\documents\github\trainning\sources\console.cpp
+
+1422737242 source:c:\users\piticroissant\documents\github\trainning\sources\gui_menu.cpp
+	<SFML/Graphics.hpp>
+	<LimbGUI/GUI.hpp>
+	"constantes.hpp"
+	"affichable.hpp"
+	"gui_menu.hpp"
+	<iostream>
+
+1422653961 c:\users\piticroissant\documents\github\trainning\limbgui\include\limbgui\gui.hpp
+	"elementGUI.hpp"
+	"bouton.hpp"
+	"zoneSaisie.hpp"
+
+1422653961 c:\users\piticroissant\documents\github\trainning\limbgui\include\limbgui\elementgui.hpp
+	<SFML/Graphics.hpp>
+
+1422653961 c:\users\piticroissant\documents\github\trainning\limbgui\include\limbgui\bouton.hpp
+
+1422653961 c:\users\piticroissant\documents\github\trainning\limbgui\include\limbgui\zonesaisie.hpp
+	<iostream>
+
+1422653964 c:\users\piticroissant\documents\github\trainning\sources\constantes.hpp
+	<string>
+
+1422736624 c:\users\piticroissant\documents\github\trainning\sources\gui_menu.hpp
+	<SFML/Graphics.hpp>
+	"ressourceLoader.hpp"
+	<vector>
+
+1422653964 source:c:\users\piticroissant\documents\github\trainning\sources\joueur.cpp
+
+1422653964 source:c:\users\piticroissant\documents\github\trainning\sources\messagerie.cpp
+
+1422653964 source:c:\users\piticroissant\documents\github\trainning\sources\ressourceloader.cpp
+	"ressourceLoader.hpp"
+	"utils.hpp"
+
+1422653964 c:\users\piticroissant\documents\github\trainning\sources\utils.hpp
+	<vector>
+	<iostream>
+	<fstream>
+	<string>
+	<ios>
+
+1422653964 source:c:\users\piticroissant\documents\github\trainning\sources\serveur.cpp
+
+1422653964 source:c:\users\piticroissant\documents\github\trainning\sources\utils.cpp
+	"utils.hpp"
+	"constantes.hpp"
+	<cstdlib>
+
