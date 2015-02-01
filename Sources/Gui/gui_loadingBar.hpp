@@ -41,7 +41,7 @@ class LoadingBar : public Widget
 	//CONSTRUCTOR
      LoadingBar();
      LoadingBar(sf::Vector2f size,
-				std::string descr,
+				sf::String descr,
 				float MAX,float param = MAX,
 				sf::Color clrBack = sf::Color::Blue,
 				sf::Color clrFore = sf::Color::White,
