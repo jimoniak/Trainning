@@ -162,7 +162,7 @@ public:
         onMyExit();
     }
 
-    virtual ~Widget();
+    virtual ~Widget(){}
 
 protected:
     static Widget* s_selected;
@@ -240,7 +240,7 @@ public:
         }
     }
 
-    ~Button();
+    ~Button(){}
 
     Text& getText() {
         return *m_text;
@@ -355,6 +355,9 @@ int main() {
                 window.close();
             }
         }
+
+        gui::Button btest;
+
 
         window.clear();
         window.display();
