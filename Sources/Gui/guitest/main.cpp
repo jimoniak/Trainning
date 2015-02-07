@@ -5,6 +5,7 @@
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/Window/Event.hpp>
 
+#include <iostream>
 #include <memory>
 #include <vector>
 
@@ -103,8 +104,10 @@ public:
             }
         }
 
-        m_pushed = true;
-        onMyPush(button);
+        if (m_mouseIn) {
+            m_pushed = true;
+            onMyPush(button);
+        }
     }
 
     void onRelease(sf::Mouse::Button button) {
@@ -162,7 +165,7 @@ public:
         onMyExit();
     }
 
-    virtual ~Widget(){}
+    virtual ~Widget() = default;
 
 protected:
     static Widget* s_selected;
@@ -179,7 +182,7 @@ protected:
         return nullptr;
     }
 
-    virtual void onTextInput(sf::Uint32 c);
+    virtual void onTextInput(sf::Uint32 c) {}
     virtual void onMyHover() {}
     virtual void onMyPush(sf::Mouse::Button button) {}
     virtual void onMyRelease(sf::Mouse::Button button) {}
@@ -206,11 +209,8 @@ class Text
 public:
     void drawMyself(sf::RenderTarget& target, sf::RenderStates states) const override
     {
-        target.draw(m_text, states);
+        target.draw(static_cast<const sf::Text&>(*this), states);
     }
-
-private:
-    sf::Text m_text;
 };
 
 
@@ -231,7 +231,7 @@ public:
 
     template <typename F>
     void setOnClick(F f) { // button.setOnClick([&menu] { menu.open(); });
-        m_onClickFunction = std::forward(f);
+        m_onClickFunction = std::move(f);
     }
 
     virtual void onMyClick(sf::Mouse::Button button) override {
@@ -348,18 +348,38 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(800u, 600u), "GUI Tests");
     window.setVerticalSyncEnabled(true);
 
+    gui::Button button;
+    button.setOnClick([&] {window.close();});
+    button.setSize({400.0f, 600.0f});
+
+    sf::Texture texture;
+    texture.loadFromFile("on.png");
+    button.setTexture(texture);
+
+    sf::Font font;
+    font.loadFromFile("Timeless.ttf");
+
+    button.getText().setFont(font);
+    button.getText().setCharacterSize(20u);
+    button.getText().setColor(sf::Color::White);
+    button.getText().setString(L"Coucou ! :D");
+
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed) {
                 window.close();
+            } else if (event.type == sf::Event::MouseButtonPressed) {
+                button.onPush(event.mouseButton.button);
+            } else if (event.type == sf::Event::MouseButtonReleased) {
+                button.onRelease(event.mouseButton.button);
             }
         }
 
-        gui::Button btest;
-
+        button.checkHover(window.mapPixelToCoords(sf::Mouse::getPosition(window)));
 
         window.clear();
+        window.draw(button);
         window.display();
     }
 }
