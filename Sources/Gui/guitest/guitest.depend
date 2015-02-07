@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1423270879 source:c:\users\piticroissant\documents\github\trainning\sources\gui\guitest\main.cpp
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/RectangleShape.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Text.hpp>
+	<SFML/Window/Event.hpp>
+	<iostream>
+	<memory>
+	<vector>
+
